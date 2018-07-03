@@ -19,6 +19,7 @@ public class Intake extends Subsystem {
 	public Spark intakeMotor2 = new Spark(RobotMap.sparkIntakeMotor2);
 	public Solenoid solenoid1 = new Solenoid(RobotMap.solenoid1);
 	public Solenoid solenoid2 = new Solenoid(RobotMap.solenoid2);
+	public Solenoid solenoid3 = new Solenoid(RobotMap.solenoid3);
 	public DigitalInput cubeSensorA = new DigitalInput(RobotMap.cubeSensorA);
 	public DigitalInput cubeSensorB = new DigitalInput(RobotMap.cubeSensorB);
 
@@ -33,9 +34,17 @@ public class Intake extends Subsystem {
 	public void Intake45Deg() {
 		solenoid2.set(true);
 	}
-	
+	 
 	public void Intake0Deg() {
 		solenoid2.set(false);
+	}
+	
+	public void OtherIntakeThingOn() {
+		solenoid3.set(true);
+	}
+	
+	public void OtherIntakeThingOff() {
+		solenoid3.set(false);
 	}
 	
 	public boolean CheckCube() {

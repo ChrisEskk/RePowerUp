@@ -34,5 +34,6 @@ public class RobotMap {
 		public static int cubeSensorB = 2;
 		public static int solenoid1 = 1;
 		public static int solenoid2 = 0;
+		public static int solenoid3 = 2;
 
 }

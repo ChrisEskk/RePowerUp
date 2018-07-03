@@ -31,21 +31,21 @@ public class OI {
 	public Joystick rightStick = new Joystick(RobotMap.rightJoystick);
 	public XboxController driverController = new XboxController(RobotMap.driverController);
 
-	Button intakeOpen = new JoystickButton(driverController, 5);
-	Button intakeClose = new JoystickButton(driverController, 6);
-	Button intake45 = new JoystickButton(driverController, 3);
-	Button intake0 = new JoystickButton(driverController, 4);
-	Button cubeIn = new JoystickButton(driverController, 2);
-	Button cubeOut = new JoystickButton(driverController, 1);
-	
+	Button intake0 = new JoystickButton(driverController, 3);
+	Button intake45 = new JoystickButton(driverController, 4);
+	Button cubeIn = new JoystickButton(driverController, 5);
+	Button cubeOut = new JoystickButton(driverController, 6);
+//	Button intakeOpen = new JoystickButton(driverController, 5);
+//	Button intakeClose = new JoystickButton(driverController, 6);
+
 	public OI() {
 		
 		cubeIn.whileHeld(new IntakeCubeIn());
 		cubeOut.whileHeld(new IntakeCubeOut());
-		intakeOpen.whenPressed(new IntakeOpen());
-		intakeClose.whenPressed(new IntakeClose());
-		intake45.whenPressed(new Intake45Deg());
-		intake0.whenPressed(new IntakePos());
+		intake45.whenActive(new Intake45Deg());
+		intake0.whenActive(new IntakePos());		
+//		intakeOpen.whenPressed(new IntakeOpen());
+//		intakeClose.whenPressed(new IntakeClose());
 		
 	}
 }
