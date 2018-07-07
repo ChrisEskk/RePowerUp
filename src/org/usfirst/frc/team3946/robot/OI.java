@@ -14,6 +14,7 @@ import org.usfirst.frc.team3946.robot.commands.IntakeCubeOut;
 import org.usfirst.frc.team3946.robot.commands.IntakeOpen;
 import org.usfirst.frc.team3946.robot.commands.IntakePos;
 import org.usfirst.frc.team3946.robot.commands.IntakeStop;
+import org.usfirst.frc.team3946.robot.commands.TwistyCubeyMove;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
@@ -37,6 +38,7 @@ public class OI {
 	Button cubeOut = new JoystickButton(driverController, 6);
 //	Button intakeOpen = new JoystickButton(driverController, 5);
 //	Button intakeClose = new JoystickButton(driverController, 6);
+	Button twistCube = new JoystickButton(driverController, 5);
 
 	public OI() {
 		
@@ -46,6 +48,7 @@ public class OI {
 		intake0.whenActive(new IntakePos());		
 //		intakeOpen.whenPressed(new IntakeOpen());
 //		intakeClose.whenPressed(new IntakeClose());
+		twistCube.whileHeld(new TwistyCubeyMove());
 		
 	}
 }

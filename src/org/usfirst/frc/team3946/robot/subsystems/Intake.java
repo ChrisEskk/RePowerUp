@@ -66,5 +66,6 @@ public class Intake extends Subsystem {
 	
     public void initDefaultCommand() {
     	setDefaultCommand(new IntakeStop());
+    	this.solenoid2.set(false);
     }
 }
